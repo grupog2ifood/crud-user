@@ -38,27 +38,25 @@ link para baixar mysql: https://dev.mysql.com/downloads/installer/
 instalation:
 
 sudo apt install python3-pip
+1: pip install flask
+2: pip install mysql-connector-python
 
-3: pip install mysql-connector-python
-
-4: pip install mysql-connector-python
 
 # criar bd e tabela
 
 - no prompt / cmd:
-5: pc@pc: $
-mysql -u root -p
+5: mysql -u root -p
 
-CREATE DATABASE empresa;
-USE empresa;
-CREATE TABLE funcionarios (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(255),
-    localizacao VARCHAR(255),
-    cargo VARCHAR(255),
-    email VARCHAR(255),
-    telefone VARCHAR(20)
+CREATE DATABASE usuarios;
+USE usuarios;
+CREATE TABLE restaurantes (
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(100) NOT NULL,
+cnpj VARCHAR(20) NOT NULL,
+telefone VARCHAR(100) NOT NULL,
+email VARCHAR(100) NOT NULL
 );
+
 
 # utilização do bootstrap
 
